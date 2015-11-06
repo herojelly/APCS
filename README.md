@@ -1,2 +1,4 @@
 # APCS
-Junior Year APCS at Paly
+Programs from AP Computer Science at Paly
+
+Hi Mr. Kuszmaul!
