@@ -19,27 +19,31 @@ public class f {
 	
 	/** Finds the nth value of the f function using recursion */
 	public static int recursive(int n) {
-		if (n < 3)		// returns n if it is less than 3
+		// returns n if it is less than 3
+		if (n < 3)		
 			return n;
-		else			// otherwise it runs n through the formula until it is broken up into parts less than 3 where it is returned
+		// otherwise it runs n through the formula until it is broken up into parts less than 3
+		else			
 			return recursive(n-1) + 2*recursive(n-2) + 3*recursive(n-3);
 	}
 	
 	/** Finds the nth value of the f function using iteration */
 	public static int iterative(int n) {
-		if (n < 3)		// returns n if it is less than 3	
+		// returns n if it is less than 3	
+		if (n < 3)	
 			return n;
-		else {			// otherwise it goes through a for loop, using the formula each step of the way
+		// otherwise it goes through a for loop, using the formula each step of the way
+		else {
 			int fOfNMinusOne = 2;	 // assuming n = 3, f(n-1) = 2
 			int fOfNMinusTwo = 1;	 // assuming n = 3, f(n-2) = 1
 			int fOfNMinusThree = 0;	 // assuming n = 3, f(n-3) = 0
-			int fOfN = 0;			 // for now, f(n) is set to temp. value of 0
+			int fOfN = 0;		 // for now, f(n) is set to temp. value of 0
 			
 			for (int i = 3; i <= n; i++) {
 				fOfN = fOfNMinusOne + 2*fOfNMinusTwo + 3*fOfNMinusThree; // The formula part
 				fOfNMinusThree = fOfNMinusTwo; 	// Because n is incremented by one, f(n-3) is now f(n-2)
 				fOfNMinusTwo = fOfNMinusOne; 	// Because n is incremented by one, f(n-2) is now f(n-1)
-				fOfNMinusOne = fOfN; 			// Because n is incremented by one, f(n-1) is now f(n)
+				fOfNMinusOne = fOfN; 		// Because n is incremented by one, f(n-1) is now f(n)
 			}
 			return fOfNMinusOne;
 		}
