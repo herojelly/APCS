@@ -21,19 +21,22 @@ public class ListOfNumbers {
 		PrintWriter out = null;
 		try {
 			System.out.println("Entering try statement");
-			out = new PrintWriter(new FileWriter("OutFile.txt")); 		// opens up outfile.txt
+			out = new PrintWriter(new FileWriter("OutFile.txt")); // opens up outfile.txt 
 
-			for (int i = 0; i < list.size(); i++) 						// writes from list to text file
+			// writes from list to text file
+			for (int i = 0; i < list.size(); i++)
 				out.println("Value at: " + i + " = " + list.get(i));
 		} 
-		catch (IndexOutOfBoundsException e) {							// Exception handling!
+		// Exception handling!
+		catch (IndexOutOfBoundsException e) {
 			System.err.println("Caught IndexOutOfBoundsException: " +
 					e.getMessage());
 		} 
 		catch (IOException e) {
 			System.err.println("Caught IOException: " + e.getMessage());
 		} 
-		finally {														// Finally block. This always runs at the end.
+		// Finally block. This always runs at the end.
+		finally {
 			if (out != null) {
 				System.out.println("Closing PrintWriter");
 				out.close();
@@ -45,7 +48,6 @@ public class ListOfNumbers {
 	}
 
 	/** Reads contents from the infile and places them into a list */
-	@SuppressWarnings("resource")
 	public void readList() {
         String line = null;
 		try {
@@ -56,14 +58,16 @@ public class ListOfNumbers {
 				list.add(i);
 			}
 		} 
-		catch(FileNotFoundException fnf) {								// Exception handling!
+		// Exception handling!
+		catch(FileNotFoundException fnf) {
 			System.err.println("File: " + "InFile.txt" + " not found.");
 		} 
 		catch (IOException io) {
 			System.err.println(io.toString());
 		}
-		catch (Exception e) {							// Gives user a friendlier (although still red) message if the 
-			System.err.println("Not an int!");			// infile has strings or other non-ints in it.
+		// Gives user a friendlier (although still red) message if the infile has strings or other non-ints in it.
+		catch (Exception e) {
+			System.err.println("Not an int!");
 		}
 	}
 

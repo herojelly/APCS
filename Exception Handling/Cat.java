@@ -17,7 +17,8 @@ public class Cat {
 			}
 			return;
 		}
-		catch (FileNotFoundException shivum) {		// Exception handling saves the day.
+		// Exception handling saves the day.
+		catch (FileNotFoundException shivum) {
 			System.err.println("File: " + file + " not found.");
 		}
 		catch (IOException sid) {
@@ -25,10 +26,11 @@ public class Cat {
 		}
 		finally {
 			if (input != null) {
+				// Try-catch appears in the finally block as well.
 				try {
 					input.close();
 				} 
-				catch (IOException sean) {			// Try-catch appears in the finally block as well.
+				catch (IOException sean) {
 					sean.printStackTrace();
 				}
 			}
