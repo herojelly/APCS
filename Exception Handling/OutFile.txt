@@ -1,0 +1,5 @@
+Value at: 0 = 2
+Value at: 1 = 6
+Value at: 2 = 8
+Value at: 3 = 0
+Value at: 4 = 10
