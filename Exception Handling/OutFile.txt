@@ -1,0 +1,7 @@
+Value at: 0 = 1
+Value at: 1 = 2
+Value at: 2 = 5
+Value at: 3 = 6
+Value at: 4 = 20
+Value at: 5 = 23103
+Value at: 6 = 20
