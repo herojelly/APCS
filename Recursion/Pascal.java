@@ -13,13 +13,13 @@ public class Pascal {
 
 	/** Finds the value in Pascal's triangle for a row and column */
 	public static int computePascal(int row, int column) {
-		if (column > row) 		// returns a placeholder value of 0 for undefined.
+		if (column > row) 	// returns a placeholder value of 0 for undefined.
 			return 0;
 		else if (column < 0) 	// returns a placeholder value of 0 for undefined.
 			return 0;
 		else if (column == 0) 	// returns 1 as a final value if the column is 0.
 			return 1;
-		else 					// completes tail-recursion until a bunch of 1s are added to each other
+		else 			// completes tail-recursion until a bunch of 1s are added to each other
 			return computePascal(row-1, column-1) + computePascal(row-1, column);
 	}
 }
